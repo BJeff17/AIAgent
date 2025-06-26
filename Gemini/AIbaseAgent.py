@@ -20,7 +20,7 @@ class AssistantAI:
         
     def parse_response(self, response:GenerateContentResponse):
         candidate = response.candidates[0].content.parts[0]
-        if hasattr(candidate, 'function_call'):
+        if hasattr(candidate, 'function_call') and candidate.function_call.name != '':
             return {"type": "function_call", "name": candidate.function_call.name, "args": candidate.function_call.args}
         elif hasattr(candidate, 'text'):
             return {"type": "text", "text": candidate.text}
