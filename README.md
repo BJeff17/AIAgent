@@ -13,7 +13,7 @@ The project is organized into API-specific modules, each in its own folder (e.g.
 AssistantAI/
 │
 ├─ gemini/                 # Wrapper and tools for Google Gemini
-│   ├─ assistant_ai.py     # Main Gemini integration
+│   ├─ aiBaseAgent.py     # Main Gemini integration
 │   └─ tools/              # Example tools for Gemini
 │
 ├─ openai/                 # Planned: wrapper for OpenAI APIs
